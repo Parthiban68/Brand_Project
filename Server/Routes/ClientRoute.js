@@ -4,7 +4,13 @@ const container = require("../Container/userContainer");
 
 const userContainer = container.getUserController();
 
-ClientRoute.post("/userregistration", (req, res, next) =>
+//Test Route
+ClientRoute.get("/testapi", (req, res, next) =>
+  userContainer.testapi(req, res, next)
+);
+
+//userRegistration Router
+ClientRoute.post("/userreg", (req, res, next) =>
   userContainer.userRegistration(req, res, next)
 );
 

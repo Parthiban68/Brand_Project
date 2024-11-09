@@ -10,6 +10,6 @@ const UserSchema = new mongoose.Schema({
   activationCode: { type: String, require: true },
 });
 
-const userModel = mongoose.model("users", UserSchema);
+const userModel = mongoose.model("brand_users", UserSchema);
 
 module.exports = userModel;

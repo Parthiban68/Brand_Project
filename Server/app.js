@@ -1,7 +1,7 @@
 const express = require('express')
 require('dotenv').config()
 const connectdb = require('./Config/connectDb')
-const ClientRoute = require('./Route/ClientRoute/ClientRoute')
+const ClientRoute = require('./Routes/ClientRoute')
 const app = express()
 const bodyparser = require('body-parser')
 const cors = require('cors')
