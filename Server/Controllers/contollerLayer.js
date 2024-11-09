@@ -16,7 +16,7 @@ class userController {
   async userRegistration(req, res, next) {
     const { username, email, password } = req.body;
     try {
-      const user = await this.userService.createUser();
+      const user = await this.userService.createUser(username, email, password);
       res.status(200).json({ message: "User Created Successfully" });
     } catch (error) {
       res.status(400).json({ message: "User Not Created" });

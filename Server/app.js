@@ -8,7 +8,8 @@ const cors = require('cors')
 
 app.use(cors())
 app.use(bodyparser.json())
-connectdb()
+// connectdb()
+connectdb.connect();
 
 app.use("/user", ClientRoute)
 
