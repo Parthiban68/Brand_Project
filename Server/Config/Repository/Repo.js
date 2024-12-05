@@ -4,17 +4,21 @@ class userRepositry {
   }
 
   async findByEmail(email) {
-    return await this.userModel.findOne({ email });
+    return await this.userModel.findOne({email});
   }
 
-  async userSaved(username, email, password) {
+  async userSaved(username, email, password, activationCode) {
+    console.log("hi1");
     let newUser = new this.userModel({
-      username: username,
-      email: email,
-      password: password,
+      username,
+      email,
+      password,
+      activationCode,
     });
-
-    return await newUser.save();
+    
+    const data =  await newUser.save();
+    
+    return
   }
 }
 
